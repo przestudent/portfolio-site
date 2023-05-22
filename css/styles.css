@@ -46,6 +46,12 @@ nav ul {
     list-style-type: none;
 }
 
+.skull {
+    fill: #7e1cba;
+    transition: color ease 0.2s;
+}
+
+
 
 
 nav ul>li:nth-child(n+1) {
@@ -53,11 +59,16 @@ nav ul>li:nth-child(n+1) {
     flex-basis: 20%;
 }
 
-nav ul>li:first-child {
+nav ul>li.nav-logo-name {
     font-size: var(--subtitle);
     text-align: left;
     flex-basis: 40%;
     font-weight: bold;
+    transition: color ease 0.2;
+}
+
+.nav-logo-name:hover {
+    color: var(--color-button-primary);
 }
 
 nav ul>li>a {
@@ -66,23 +77,38 @@ nav ul>li>a {
     color: inherit;
 }
 
-nav ul>li:last-child {
+.button-nav {
     background-color: var(--color-accent);
     padding: 1em 2em;
     border-radius: 6px;
+}
+
+nav ul>li {
+    transition: all ease 0.2s;
+}
+
+nav ul>li:hover {
+    transform: translateY(-3px);
+}
+
+.button-nav:hover {
+    box-shadow: 0 20px 80px -10px var(--color-accent);
 }
 
 /* #endregion */
 
 
 /* #region  main*/
-
+.my-name-przem {
+    color: var(--color-button-primary);
+}
 
 main {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 6em;
+    margin-top: 2em;
 }
 
 h1>span:nth-child(1) {
@@ -105,6 +131,7 @@ main>* {
 }
 
 .hero-svg {
+    fill: var(--color-button-primary);
     width: 310px;
     height: auto;
 
@@ -112,11 +139,11 @@ main>* {
 
 /* #endregion  */
 
-
+/* #region projects */
 .divider {
     width: 100%;
     background-color: var(--color-accent);
-    height: 10px;
+    height: 18px;
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -128,6 +155,7 @@ main>* {
     background-color: var(--color-secondary);
     border: 10px solid var(--color-secondary);
     border-radius: 100px;
+
 }
 
 #projects>article {
@@ -143,7 +171,48 @@ main>* {
 .text-container {
     grid-column: 5/11;
     grid-row: 1/2;
+    text-align: right;
+    z-index: 9999;
+}
+
+.project-description {
     background-color: var(--color-card);
-    width: 50%;
+    padding: 2em 1em;
+    border-radius: 6px;
+}
+
+.project-tech ul {
+    list-style-type: none;
+    display: flex;
+    text-decoration: none;
+    justify-content: flex-end;
+    gap: 4em;
+    padding-left: 0;
+}
+
+#projects article.reverse .text-container {
+    grid-column: 1/7;
+
+    text-align: left;
+}
+
+#projects article.reverse .image-container {
+    grid-column: 6/11;
+
+    text-align: left;
+}
+
+#projects article.reverse .project-tech ul {
+    justify-content: flex-start;
+}
+
+/* #endregion */
+
+footer {
+    background-color: var(--color-card);
+    border: 2px solid var(--color-button-primary);
+    border-radius: 6px;
+    width: 100%;
     height: 100px;
+    margin-bottom: 1em;
 }
