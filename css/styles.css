@@ -1,0 +1,149 @@
+:root {
+    --color-primary: #f7f6fe;
+    --color-secondary: #040312;
+    --color-button-primary: #7e1cba;
+    --color-button-secondary: #280624;
+    --color-accent: #ba1ca8;
+    font-family: 'Inter var', sans-serif;
+    box-sizing: border-box;
+    --h1: 48px;
+    --h2: 32px;
+    --subtitle: 24px;
+    --p: 18px;
+    --sub: 16px;
+    --color-card: #11101E;
+
+}
+
+body {
+    background-color: var(--color-secondary);
+    margin: 0 15%;
+    color: var(--color-primary);
+
+}
+
+/* #region nav*/
+.skull {
+    width: 20px;
+    height: auto;
+    background-color: inherit;
+}
+
+nav {
+    padding: 20px 0;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding-left: 0;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+
+
+nav ul>li:nth-child(n+1) {
+    font-size: var(--p);
+    flex-basis: 20%;
+}
+
+nav ul>li:first-child {
+    font-size: var(--subtitle);
+    text-align: left;
+    flex-basis: 40%;
+    font-weight: bold;
+}
+
+nav ul>li>a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul>li:last-child {
+    background-color: var(--color-accent);
+    padding: 1em 2em;
+    border-radius: 6px;
+}
+
+/* #endregion */
+
+
+/* #region  main*/
+
+
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 6em;
+}
+
+h1>span:nth-child(1) {
+    font-size: var(--p);
+    display: block;
+}
+
+h1>span:nth-child(2) {
+    font-size: var(--h1);
+    display: block;
+}
+
+h1>span:nth-child(3) {
+    display: block;
+}
+
+
+main>* {
+    width: 50%;
+}
+
+.hero-svg {
+    width: 310px;
+    height: auto;
+
+}
+
+/* #endregion  */
+
+
+.divider {
+    width: 100%;
+    background-color: var(--color-accent);
+    height: 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.divider>span {
+    background-color: var(--color-secondary);
+    border: 10px solid var(--color-secondary);
+    border-radius: 100px;
+}
+
+#projects>article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.image-container {
+    grid-column: 1/6;
+    grid-row: 1/2;
+}
+
+.text-container {
+    grid-column: 5/11;
+    grid-row: 1/2;
+    background-color: var(--color-card);
+    width: 50%;
+    height: 100px;
+}
