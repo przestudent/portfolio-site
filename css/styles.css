@@ -186,10 +186,17 @@ main>* {
 
 /* #region projects */
 #logo-react {
-    animation: logo-spin 2s linear 0 infinite normal none;
+    animation-name: logo-spin;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 @keyframes logo-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
     100% {
         transform: rotate(360deg);
     }
