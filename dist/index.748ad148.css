@@ -53,7 +53,10 @@ nav {
 
 nav ul {
   text-align: center;
+  flex-flow: wrap;
+  justify-content: center;
   align-items: center;
+  gap: 2em;
   padding-left: 0;
   display: flex;
 }
@@ -67,22 +70,11 @@ nav ul > li:nth-child(n+1) {
   font-size: var(--p);
 }
 
-nav ul > li:nth-child(2) {
-  flex-basis: 10%;
-}
-
-nav ul > li:nth-child(3), nav ul > li:nth-child(4) {
-  flex-basis: 5%;
-}
-
-nav ul > li:last-child {
-  flex-basis: 10%;
-}
-
 nav ul > li:first-child {
   font-size: var(--subtitle);
   text-align: left;
-  flex-basis: 70%;
+  flex-basis: auto;
+  margin-right: auto;
   font-weight: bold;
 }
 
@@ -103,8 +95,12 @@ nav ul > li > a {
 
 .button-nav {
   background-color: var(--color-button-primary);
+  width: 7em;
+  height: 3em;
   border-radius: 6px;
-  padding: 1em 2em;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 nav ul > li {
@@ -163,12 +159,19 @@ main > * {
   display: flex;
 }
 
-.project-tech-name {
-  display: grid;
+.project-tech > ul > li {
+  width: 50px;
+  text-align: center;
 }
 
-.project-tech-name:first-child, .project-tech-name:last-child {
-  grid-area: 1 / 1 / 2 / 2;
+#logo-react {
+  animation: logo-spin 2s linear 0 infinite normal none;
+}
+
+@keyframes logo-spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .project-name {
@@ -202,7 +205,8 @@ main > * {
 
 .image-container {
   width: 100%;
-  border-radius: 10px;
+  max-height: 300px;
+  border-radius: 20px;
   grid-area: 1 / 1 / 2 / 6;
   margin: 2rem 0 4rem;
   padding: 1rem;
@@ -221,14 +225,22 @@ main > * {
 }
 
 .project-tech {
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
   margin: 1em 0;
+  display: flex;
 }
 
 .project-tech ul {
   justify-content: flex-end;
-  gap: 4em;
+  gap: 1em;
   text-decoration: none;
   display: flex;
+}
+
+.project-tech > h4 {
+  color: var(--color-accent);
 }
 
 #projects article.reverse .text-container {
@@ -241,7 +253,7 @@ main > * {
   grid-column: 6 / 11;
 }
 
-#projects article.reverse .project-tech ul {
+.project-tech-reverse {
   justify-content: flex-start;
 }
 
@@ -280,6 +292,33 @@ footer {
 [class*="fa-"]:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 19px -3px #ba1ca8;
+}
+
+@media (width <= 800px) {
+  #projects > article {
+    flex-direction: column;
+    display: flex;
+  }
+
+  #projects > article > img {
+    order: 2;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  #projects > article > div.text-container {
+    text-align: left;
+    order: 1;
+  }
+
+  #projects > article > div.text-container > div.project-tech {
+    justify-content: flex-start;
+  }
+
+  nav > ul > li:first-child {
+    text-align: center;
+    flex-basis: 100%;
+  }
 }
 
 /*# sourceMappingURL=index.748ad148.css.map */
