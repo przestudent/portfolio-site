@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="src/css/styles.css" />
     <script
       src="https://kit.fontawesome.com/2f4e2dac07.js"
       crossorigin="anonymous"
@@ -19,6 +19,7 @@
     <link rel = "icon" href = 
 "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" 
         type = "image/x-icon">
+        
   </head>
   <body>
     <nav>
@@ -58,7 +59,7 @@
         <li>
           <a href="https://github.com/przestudent"><i class="fa-brands fa-square-github"></i></a>
         </li>
-        <li ><a class="button-nav" href="">CV</a></li>
+        <li ><a class="button-nav button-hover" href="">CV</a></li>
       </ul>
     </nav>
 
@@ -99,7 +100,7 @@
     <section id="projects">
       <article>
         <img
-          class="image-container"
+          class="image-container image-container-box-shadow"
           alt="project-1"
           src="https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg"
         />
@@ -156,7 +157,7 @@
       </article>
       <article class="reverse">
         <img
-          class="image-container"
+          class="image-container image-container-box-shadow-reverse"
           alt="project-1"
           src="https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg"
         />
@@ -211,7 +212,14 @@
     </section>
 
     <footer id="contact">
-      <h4>PRZEM</h4>
+      <h4>Contact</h4>
+      <form id="email-contact-form">
+        <label for="from-name">From</label><input type="text"  id="from_name" name="from_name" required>
+        <label for="to_name">Email</label><input type="email"  id="to_name" name="to_name">
+        <label for="message">Message</label><textarea id ="message" name="message" required></textarea>
+        <input  class="element-translateY" type="submit" id="email-submit">Send Email</input>
+      </form>
+      <!--  element-translateY -->
       <ul class="footer-media">
         <li>
           <a href=""><i class="fa-brands fa-linkedin"></i></a>
@@ -226,5 +234,50 @@
       </ul>
       <div class="footer-message">email</div>
     </footer>
+    
+    
+    
+    <!-- <form id="form">
+      <div class="field">
+        <label for="from_name">Your Name</label>
+        <input type="text" name="from_name" id="from_name">
+      </div>
+      <div class="field">
+        <label for="to_name">Email</label>
+        <input type="email" name="to_name" id="to_name">
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <input type="text" name="message" id="message">
+      </div>
+      <input type="submit" id="button" value="Send Email" >
+    </form> -->
+    
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <script type="text/javascript">
+      emailjs.init('K-rriTQAUOptMitqY')
+    </script>
+    <script>const btn = document.getElementById('email-submit');
+
+      document.getElementById('email-contact-form')
+       .addEventListener('submit', function(event) {
+         event.preventDefault();
+      
+         btn.innerText = 'Sending...';
+      
+         const serviceID = 'default_service';
+         const templateID = 'template_i2hymwg';
+      
+         emailjs.sendForm(serviceID, templateID, this)
+          .then(() => {
+            btn.innerText = 'Send Email';
+            alert('Sent!');
+          }, (err) => {
+            btn.innerText = 'Send Email';
+            alert(JSON.stringify(err));
+          });
+      });</script>
   </body>
 </html>
