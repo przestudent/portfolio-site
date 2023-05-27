@@ -49,8 +49,10 @@ body {
 }
 
 nav {
+  height: 10vh;
   width: 100%;
-  padding: 20px 0;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 
 nav ul {
@@ -113,7 +115,7 @@ nav ul > li:hover {
 }
 
 .button-hover:hover {
-  box-shadow: 0 20px 80px -10px var(--color-accent);
+  box-shadow: 0px 0px 20px 0px var(--color-accent);
 }
 
 .element-translateY {
@@ -130,10 +132,18 @@ nav ul > li:hover {
 
 main {
   width: 100%;
-  height: 90vh;
-  justify-content: space-between;
-  align-items: center;
+  height: 80vh;
   display: flex;
+}
+
+.main-left {
+  position: relative;
+}
+
+main h1 {
+  padding-left: 3vw;
+  position: absolute;
+  top: 25vh;
 }
 
 h1 > span:first-child {
@@ -151,15 +161,11 @@ h1 > span:nth-child(3) {
 }
 
 .main-left {
-  width: 30%;
+  width: 40%;
 }
 
 .main-right {
-  width: 70%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  width: 60%;
 }
 
 .project-tech > ul > li {
@@ -197,7 +203,8 @@ h1 > span:nth-child(3) {
   border-radius: 6px;
   justify-content: center;
   align-items: center;
-  margin: 3rem 0;
+  margin-top: 3rem;
+  margin-bottom: 6rem;
   display: flex;
 }
 
@@ -210,6 +217,7 @@ h1 > span:nth-child(3) {
 #projects > article {
   grid-template-columns: repeat(10, 1fr);
   align-items: center;
+  margin-bottom: 6rem;
   display: grid;
 }
 

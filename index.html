@@ -19,7 +19,6 @@
     <link rel = "icon" href = 
 "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" 
         type = "image/x-icon">
-        
   </head>
   <body>
     <nav>
@@ -72,7 +71,8 @@
         </h1>
       </div>
       <div class="main-right">
-        <svg
+        <div class="spiral"></div>
+        <!-- <svg
           class="hero-svg"
           width="800px"
           height="800px"
@@ -93,10 +93,12 @@
               fill-rule="evenodd"
             />
           </g>
-        </svg>
+        </svg> -->
       </div>
     </main>
+
     <div class="divider"><span>Projects</span></div>
+
     <section id="projects">
       <article>
         <img
@@ -214,12 +216,11 @@
     <footer id="contact">
       <h4>Contact</h4>
       <form id="email-contact-form">
-        <label for="from-name">From</label><input type="text"  id="from_name" name="from_name" required>
+        <label for="from_name">From</label><input type="text"  id="from_name" name="from_name" required>
         <label for="to_name">Email</label><input type="email"  id="to_name" name="to_name">
         <label for="message">Message</label><textarea id ="message" name="message" required></textarea>
         <input  class="element-translateY" type="submit" id="email-submit">Send Email</input>
       </form>
-      <!--  element-translateY -->
       <ul class="footer-media">
         <li>
           <a href=""><i class="fa-brands fa-linkedin"></i></a>
@@ -233,26 +234,9 @@
         </li>
       </ul>
       <div class="footer-message">email</div>
-    </footer>
-    
-    
-    
-    <!-- <form id="form">
-      <div class="field">
-        <label for="from_name">Your Name</label>
-        <input type="text" name="from_name" id="from_name">
-      </div>
-      <div class="field">
-        <label for="to_name">Email</label>
-        <input type="email" name="to_name" id="to_name">
-      </div>
-      <div class="field">
-        <label for="message">Message</label>
-        <input type="text" name="message" id="message">
-      </div>
-      <input type="submit" id="button" value="Send Email" >
-    </form> -->
-    
+    </footer> 
+
+    <!-- #region scripts -->
     <script type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     
@@ -278,6 +262,28 @@
             btn.innerText = 'Send Email';
             alert(JSON.stringify(err));
           });
-      });</script>
+      });
+      </script>
+
+       <script src="src/js/p5.min.js"></script>
+       <script src="src/js/vanta.trunk.min.js"></script>
+       <script>
+              VANTA.TRUNK({
+                el: ".spiral",
+                mouseControls: false,
+                touchControls: false,
+                gyroControls: false,
+                minHeight: 600.00,
+                minWidth: 600.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0x7e1cba,
+                backgroundColor: 0x040312
+              })
+       </script>
+       <!-- #endregion -->
   </body>
 </html>
+
+
+<!-- TODO:  ADD REUSABLE SVG'S MAYBE IF YOU CARE LATER -->

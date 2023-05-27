@@ -1,3 +1,4 @@
+/* #region setup */
 :root {
     --color-primary: #f7f6fe;
     --color-secondary: #040312;
@@ -47,7 +48,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-
+/* #endregion */
 /* #region nav*/
 .skull {
     width: 20px;
@@ -57,7 +58,9 @@ body {
 }
 
 nav {
-    padding: 20px 0;
+    padding-top: 5vh;
+    height: 10vh;
+    padding-bottom: 5vh;
     width: 100%;
 }
 
@@ -70,9 +73,6 @@ nav ul {
     gap: 2em;
     flex-flow: row wrap;
 }
-
-
-
 
 nav ul>li:nth-child(n+1) {
     font-size: var(--p);
@@ -125,7 +125,7 @@ nav ul>li:hover {
 
 /* TODO  : FIX THIS SHIT NOT WORKING FOR THE SEND EMAIL BUTTON */
 .button-hover:hover {
-    box-shadow: 0 20px 80px -10px var(--color-accent);
+    box-shadow: 0px 0px 20px 0px var(--color-accent);
 }
 
 .element-translateY {
@@ -138,7 +138,6 @@ nav ul>li:hover {
 
 /* #endregion */
 
-
 /* #region  main*/
 .my-name-przem {
     color: var(--color-button-primary);
@@ -146,12 +145,20 @@ nav ul>li:hover {
 
 main {
     display: flex;
-    justify-content: space-between;
     width: 100%;
-    align-items: center;
-    height: 90vh;
+    height: 80vh;
 }
 
+.main-left {
+    position: relative;
+}
+
+/* TODO: ADD FALLBACK :D */
+main h1 {
+    padding-left: 3vw;
+    position: absolute;
+    top: 25vh;
+}
 
 h1>span:nth-child(1) {
     font-size: var(--p);
@@ -167,23 +174,12 @@ h1>span:nth-child(3) {
     display: block;
 }
 
-
 .main-left {
-    width: 30%;
+    width: 40%;
 }
 
-/* .hero-svg {
-    fill: var(--color-button-primary);
-    width: 310px;
-    height: auto;
-} */
-
 .main-right {
-    width: 70%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 60%;
 }
 
 .project-tech>ul>li {
@@ -192,7 +188,6 @@ h1>span:nth-child(3) {
 }
 
 /* #endregion  */
-
 /* #region projects */
 #logo-react {
     animation-name: logo-spin;
@@ -225,20 +220,21 @@ h1>span:nth-child(3) {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 3rem 0;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
 }
 
 .divider>span {
     background-color: var(--color-secondary);
     border: 10px solid var(--color-secondary);
     border-radius: 100px;
-
 }
 
 #projects>article {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     align-items: center;
+    margin-bottom: 6rem;
 }
 
 .image-container {
@@ -284,7 +280,6 @@ h1>span:nth-child(3) {
 }
 
 .project-tech ul {
-
     display: flex;
     text-decoration: none;
     justify-content: flex-end;
@@ -308,7 +303,6 @@ h1>span:nth-child(3) {
 
 .project-tech:hover>h4::before {
     width: 100%;
-
 }
 
 #projects article.reverse .text-container {
@@ -355,9 +349,8 @@ footer {
     gap: 2em
 }
 
-
 /* #endregion */
-
+/* #region font-awesome */
 [class*="fa-"] {
     color: var(--color-accent);
     font-size: 2em;
@@ -371,6 +364,7 @@ footer {
     transform: translateY(-3px);
 }
 
+/* #endregion */
 
 /* #region contact-form */
 #email-contact-form {
@@ -392,8 +386,6 @@ footer {
 
 }
 
-#email-submit {}
-
 #email-contact-form>input:not([type="submit"]),
 #email-contact-form>textarea {
     display: block;
@@ -412,7 +404,6 @@ footer {
     min-height: 10rem;
 }
 
-
 #email-contact-form>label {
     color: white;
     display: block;
@@ -422,33 +413,9 @@ footer {
     min-height: 10rem;
 }
 
-
-/* .field label {
-    display: block;
-    font-size: 12px;
-    color: #777;
-}
-
-.field input {
-    display: block;
-    min-width: 250px;
-    line-height: 1.5;
-    font-size: 14px;
-}
-
-input[type="submit"] {
-    display: block;
-    padding: 6px 30px;
-    font-size: 14px;
-    background-color: #4460AA;
-    color: #fff;
-    border: none
-} */
-
 /* #endregion */
 
-
-
+/* #region media-queries */
 @media (max-width:1025px) {
     .project-tech>h4 {
         flex-basis: 100%;
@@ -484,6 +451,6 @@ input[type="submit"] {
     .project-tech>h4 {
         flex-basis: auto;
     }
-
-
 }
+
+/* #endregion */

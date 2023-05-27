@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Oxygen:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" href="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" type="image/x-icon">
-        
   </head>
   <body>
     <nav>
@@ -46,18 +45,34 @@
         </h1>
       </div>
       <div class="main-right">
-        <svg class="hero-svg" width="800px" height="800px" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <div class="spiral"></div>
+        <!-- <svg
+          class="hero-svg"
+          width="800px"
+          height="800px"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0" />
 
-          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
 
           <g id="SVGRepo_iconCarrier">
-            <path d="M8 8v5h4V8h-2V6H8v2zm-8 8h16V0H0v16zm2-2V2h12v12H2zM8 4h2V2H8v2zm2 2h2V4h-2v2zm-1 6v-2h2v2H9z" fill-rule="evenodd"></path>
+            <path
+              d="M8 8v5h4V8h-2V6H8v2zm-8 8h16V0H0v16zm2-2V2h12v12H2zM8 4h2V2H8v2zm2 2h2V4h-2v2zm-1 6v-2h2v2H9z"
+              fill-rule="evenodd"
+            />
           </g>
-        </svg>
+        </svg> -->
       </div>
     </main>
+
     <div class="divider"><span>Projects</span></div>
+
     <section id="projects">
       <article>
         <img class="image-container image-container-box-shadow" alt="project-1" src="https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg">
@@ -143,12 +158,11 @@
     <footer id="contact">
       <h4>Contact</h4>
       <form id="email-contact-form">
-        <label for="from-name">From</label><input type="text" id="from_name" name="from_name" required="">
+        <label for="from_name">From</label><input type="text" id="from_name" name="from_name" required="">
         <label for="to_name">Email</label><input type="email" id="to_name" name="to_name">
         <label for="message">Message</label><textarea id="message" name="message" required=""></textarea>
         <input class="element-translateY" type="submit" id="email-submit">Send Email
       </form>
-      <!--  element-translateY -->
       <ul class="footer-media">
         <li>
           <a href=""><i class="fa-brands fa-linkedin"></i></a>
@@ -162,26 +176,9 @@
         </li>
       </ul>
       <div class="footer-message">email</div>
-    </footer>
-    
-    
-    
-    <!-- <form id="form">
-      <div class="field">
-        <label for="from_name">Your Name</label>
-        <input type="text" name="from_name" id="from_name">
-      </div>
-      <div class="field">
-        <label for="to_name">Email</label>
-        <input type="email" name="to_name" id="to_name">
-      </div>
-      <div class="field">
-        <label for="message">Message</label>
-        <input type="text" name="message" id="message">
-      </div>
-      <input type="submit" id="button" value="Send Email" >
-    </form> -->
-    
+    </footer> 
+
+    <!-- #region scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     
     <script type="text/javascript">emailjs.init("K-rriTQAUOptMitqY");
@@ -203,5 +200,26 @@ document.getElementById("email-contact-form").addEventListener("submit", functio
 });
 
 </script>
+
+       <script src="/index.a802b8bb.js"></script>
+       <script src="/index.613a3914.js"></script>
+       <script>VANTA.TRUNK({
+    el: ".spiral",
+    mouseControls: false,
+    touchControls: false,
+    gyroControls: false,
+    minHeight: 600.00,
+    minWidth: 600.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x7e1cba,
+    backgroundColor: 0x040312
+});
+
+</script>
+       <!-- #endregion -->
   <script src="/real%20folio.3464ddca.js"></script></body>
 </html>
+
+
+<!-- TODO:  ADD REUSABLE SVG'S MAYBE IF YOU CARE LATER -->
