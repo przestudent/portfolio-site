@@ -173,18 +173,15 @@ h1 > span:nth-child(3) {
   text-align: center;
 }
 
-#logo-react {
-  animation-name: logo-spin;
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+.logo-react:after {
+  content: url("https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg");
+}
+
+.logo-java-script:after {
+  content: url("https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg");
 }
 
 @keyframes logo-spin {
-  0% {
-    transform: rotate(0);
-  }
-
   100% {
     transform: rotate(360deg);
   }
@@ -379,8 +376,16 @@ footer {
 }
 
 @media (width <= 1025px) {
+  main h1 {
+    padding-left: 3vw;
+  }
+
   .project-tech > h4 {
     flex-basis: 100%;
+  }
+
+  .project-tech:hover > h4:before {
+    width: 62%;
   }
 }
 
@@ -412,6 +417,14 @@ footer {
 
   .project-tech > h4 {
     flex-basis: auto;
+  }
+
+  .project-tech:hover > h4:before {
+    width: 100%;
+  }
+
+  main h1 {
+    padding-left: 0;
   }
 }
 
