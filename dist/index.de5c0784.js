@@ -12,10 +12,14 @@ function isInViewport(el) {
 }
 const divider = document.querySelector(".divider");
 const message = document.querySelector(".divider>span");
-document.addEventListener("scroll", function() {
+function ScrollAnimation() {
     console.log("SCROLL");
-    isInViewport(divider) ? console.log("YES") : console.log("NO");
-}, {
+    if (isInViewport(divider)) {
+        divider.classList.add("divider-grow");
+        document.removeEventListener("scroll", ScrollAnimation);
+    }
+}
+document.addEventListener("scroll", ScrollAnimation, {
     passive: true
 });
 

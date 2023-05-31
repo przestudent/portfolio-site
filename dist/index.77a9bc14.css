@@ -41,11 +41,16 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.skull {
+.my-cool-logo {
   width: 20px;
   height: auto;
   fill: #7e1cba;
   transition: color .2s;
+}
+
+.my-cool-logo-spin {
+  transition: transform 1s;
+  display: inline-block;
 }
 
 nav {
@@ -67,6 +72,10 @@ nav ul {
 
 nav ul > li:nth-child(n+1) {
   font-size: var(--p);
+}
+
+nav ul > li:first-child:hover .my-cool-logo-spin {
+  transform: rotate(360deg);
 }
 
 nav ul > li:first-child {
@@ -193,16 +202,41 @@ h1 > span:nth-child(3) {
 }
 
 .divider {
-  width: 100%;
-  background: #ba1ca8;
-  background: var(--gradient);
-  height: 18px;
-  border-radius: 6px;
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
   margin-bottom: 6rem;
   display: flex;
+}
+
+.divider-grow:before {
+  content: "";
+  background: var(--gradient);
+  height: 10px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.divider-grow:after {
+  content: "";
+  background: var(--gradient);
+  height: 10px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.divider-grow:after, .divider-grow:before {
+  animation: 3s ease-in .2s both divider-grow;
+}
+
+@keyframes divider-grow {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
 .divider > span {

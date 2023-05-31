@@ -50,11 +50,16 @@ body {
 
 /* #endregion */
 /* #region nav*/
-.skull {
+.my-cool-logo {
     width: 20px;
     height: auto;
     fill: #7e1cba;
     transition: color ease 0.2s;
+}
+
+.my-cool-logo-spin {
+    display: inline-block;
+    transition: transform ease 1s;
 }
 
 nav {
@@ -76,6 +81,10 @@ nav ul {
 
 nav ul>li:nth-child(n+1) {
     font-size: var(--p);
+}
+
+nav ul>li:first-child:hover .my-cool-logo-spin {
+    transform: rotate(360deg);
 }
 
 nav ul>li:first-child {
@@ -211,16 +220,47 @@ h1>span:nth-child(3) {
 }
 
 .divider {
-    width: 100%;
+    /* width: 100%;
     background: rgb(186, 28, 168);
     background: var(--gradient);
     height: 18px;
-    border-radius: 6px;
+    border-radius: 6px; */
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 3rem;
     margin-bottom: 6rem;
+}
+
+.divider-grow::before {
+    content: "";
+    background: var(--gradient);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    height: 10px;
+}
+
+.divider-grow::after {
+    content: "";
+    background: var(--gradient);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    height: 10px;
+}
+
+.divider-grow::after,
+.divider-grow::before {
+    animation: 3s ease-in 0.2s 1 both divider-grow;
+}
+
+@keyframes divider-grow {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 .divider>span {
