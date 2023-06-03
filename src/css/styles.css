@@ -64,9 +64,9 @@ body {
 }
 
 nav {
-    padding-top: 5vh;
-    height: 10vh;
-    padding-bottom: 5vh;
+    padding-top: 3vh;
+    height: 5vh;
+    padding-bottom: 3vh;
     width: 100%;
 }
 
@@ -90,9 +90,9 @@ nav ul>li:first-child:hover .my-cool-logo-spin {
 
 nav ul>li:first-child {
     font-size: var(--subtitle);
-    text-align: left;
+    /* text-align: left; */
     margin-right: auto;
-    flex-basis: auto;
+    /* flex-basis: auto; */
     font-weight: bold;
 }
 
@@ -164,7 +164,7 @@ nav ul>li:hover {
 main {
     display: flex;
     width: 100%;
-    height: 80vh;
+    height: 90vh;
 }
 
 .main-left {
@@ -205,9 +205,13 @@ h1>span:nth-child(3) {
     text-align: center;
 }
 
-/* #endregion  */
-#my-cool-spiral {}
+.project-tech-logos {
+    display: block;
+    height: 50px;
+    width: 50px;
+}
 
+/* #endregion  */
 .my-cool-logo-spiral-document {
     height: 30px;
     width: 30px;
@@ -218,23 +222,7 @@ h1>span:nth-child(3) {
 }
 
 /* #region projects */
-.logo-display {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
 
-.logo-java-script {
-    position: relative;
-}
-
-.logo-react::after {
-    content: url(https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg);
-}
-
-.logo-java-script::after {
-    content: url(https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg);
-}
 
 @keyframes logo-spin {
     100% {
@@ -390,6 +378,10 @@ h1>span:nth-child(3) {
     padding-top: 2em;
 }
 
+.logo-react-spin {
+    animation: 15s linear 0s infinite logo-spin;
+}
+
 /* #endregion */
 
 /* #region footer */
@@ -498,6 +490,21 @@ footer {
 }
 
 @media (max-width:800px) {
+    nav {
+
+        padding-top: 2vh;
+        padding-bottom: 10vh;
+    }
+
+    nav ul {
+        row-gap: 1rem;
+    }
+
+    nav>ul>li:first-child {
+        text-align: center;
+        margin: 0 auto;
+    }
+
     #projects>article {
         display: flex;
         flex-direction: column;
