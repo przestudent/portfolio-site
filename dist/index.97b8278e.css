@@ -1,0 +1,99 @@
+.my-cool-logo {
+  width: 20px;
+  height: auto;
+  fill: #7e1cba;
+  transition: color .2s;
+}
+
+.my-cool-logo-spin {
+  transition: transform 1s;
+  display: inline-block;
+}
+
+nav {
+  height: 5vh;
+  width: 100%;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
+nav ul {
+  text-align: center;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding-left: 0;
+  display: flex;
+}
+
+nav ul > li:nth-child(n+1) {
+  font-size: var(--p);
+}
+
+nav ul > li:first-child:hover .my-cool-logo-spin {
+  transform: rotate(360deg);
+}
+
+nav ul > li:first-child {
+  font-size: var(--subtitle);
+  margin-right: auto;
+  font-weight: bold;
+}
+
+nav > ul > li:first-child > a {
+  align-items: center;
+  gap: .7rem;
+  display: flex;
+}
+
+.nav-logo-name {
+  color: inherit;
+  transition: color .5s;
+}
+
+.nav-logo-name:hover {
+  color: var(--color-button-primary);
+}
+
+nav ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button-nav {
+  background-color: var(--color-button-primary);
+  width: 7em;
+  height: 3em;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+nav ul > li {
+  transition: transform ease var(--transition-duration, .3s);
+}
+
+nav ul > li:hover {
+  transform: translateY(-3px);
+}
+
+.button-hover {
+  transition: box-shadow ease var(--transition-duration, .3s);
+}
+
+.button-hover:hover {
+  box-shadow: 0px 0px 20px 0px var(--color-accent);
+}
+
+.element-translateY {
+  transition: transform ease var(--transition-duration, .3s);
+}
+
+.element-translateY:hover {
+  transform: translateY(-3px);
+}
+
+/*# sourceMappingURL=index.97b8278e.css.map */

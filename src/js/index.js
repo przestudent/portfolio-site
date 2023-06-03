@@ -21,7 +21,6 @@ function isInViewport(el) {
 const divider = document.querySelector(".divider");
 const message = document.querySelector(".divider>span");
 function ScrollAnimation() {
-  console.log("SCROLL");
   if (isInViewport(divider)) {
     divider.classList.add("divider-grow");
     document.removeEventListener("scroll", ScrollAnimation);

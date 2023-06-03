@@ -1,0 +1,56 @@
+/* #region  main*/
+.my-name-przem {
+    color: var(--color-button-primary);
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: 90vh;
+}
+
+.main-left {
+    position: relative;
+}
+
+/* TODO: ADD FALLBACK :D */
+main h1 {
+    padding-left: 3vw;
+    position: absolute;
+    top: 25vh;
+}
+
+h1>span:nth-child(1) {
+    font-size: var(--p);
+    display: block;
+}
+
+h1>span:nth-child(2) {
+    font-size: var(--h1);
+    display: block;
+}
+
+h1>span:nth-child(3) {
+    display: block;
+}
+
+.main-left {
+    width: 40%;
+}
+
+.main-right {
+    width: 60%;
+}
+
+.project-tech>ul>li {
+    width: 50px;
+    text-align: center;
+}
+
+.project-tech-logos {
+    display: block;
+    height: 50px;
+    width: 50px;
+}
+
+/* #endregion  */
