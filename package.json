@@ -2,7 +2,7 @@
   "name": "real-folio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "/src/js/index.js",
   "source": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
