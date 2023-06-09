@@ -1,0 +1,64 @@
+:root {
+  --color-primary: #f7f6fe;
+  --color-secondary: #040312;
+  --color-button-primary: #7e1cba;
+  --color-button-secondary: #280624;
+  --color-accent: #ba1ca8;
+  box-sizing: border-box;
+  --h1: 48px;
+  --h2: 32px;
+  --subtitle: 24px;
+  --p: 18px;
+  --sub: 16px;
+  --color-card: #11101e;
+  --font-inter: "Inter", sans-serif;
+  --transition-duration: .3s;
+  --font-oxygen: "Oxygen", sans-serif;
+  --gradient: radial-gradient(circle, var(--color-accent) 0%, var(--color-button-primary) 89%);
+  font-family: var(--font-inter);
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+body {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  margin: 0 15%;
+}
+
+.color-gradinet-effect {
+  background: linear-gradient(120deg, var(--color-accent), var(--color-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.my-cool-logo-spiral-document {
+  width: 30px;
+  height: 30px;
+}
+
+.hidden-svgs {
+  display: none;
+}
+
+[class*="fa-"] {
+  color: var(--color-accent);
+  font-size: 2em;
+  transition: all .5s;
+}
+
+[class*="fa-"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 19px -3px #ba1ca8;
+}
+
+/*# sourceMappingURL=index.77a9bc14.css.map */

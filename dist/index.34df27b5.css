@@ -1,0 +1,54 @@
+.my-name-przem {
+  color: var(--color-button-primary);
+}
+
+main {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+}
+
+.main-left {
+  position: relative;
+}
+
+main h1 {
+  padding-left: 3vw;
+  position: absolute;
+  top: 25vh;
+}
+
+h1 > span:first-child {
+  font-size: var(--p);
+  display: block;
+}
+
+h1 > span:nth-child(2) {
+  font-size: var(--h1);
+  display: block;
+}
+
+h1 > span:nth-child(3) {
+  display: block;
+}
+
+.main-left {
+  width: 40%;
+}
+
+.main-right {
+  width: 60%;
+}
+
+.project-tech > ul > li {
+  text-align: center;
+  width: 50px;
+}
+
+.project-tech-logos {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+/*# sourceMappingURL=index.34df27b5.css.map */
