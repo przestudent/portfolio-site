@@ -266,28 +266,28 @@
     ></script>
 
     <script type="text/javascript">
-      emailjs.init("K-rriTQAUOptMitqY");
+      emailjs.init('K-rriTQAUOptMitqY');
     </script>
     <script>
-      const btn = document.getElementById("email-submit");
+      const btn = document.getElementById('email-submit');
 
       document
-        .getElementById("email-contact-form")
-        .addEventListener("submit", function (event) {
+        .getElementById('email-contact-form')
+        .addEventListener('submit', function (event) {
           event.preventDefault();
 
-          btn.value = "Sending...";
+          btn.value = 'Sending...';
 
-          const serviceID = "default_service";
-          const templateID = "template_i2hymwg";
+          const serviceID = 'default_service';
+          const templateID = 'template_i2hymwg';
 
           emailjs.sendForm(serviceID, templateID, this).then(
             () => {
-              btn.value = "Send Email";
-              alert("Sent!");
+              btn.value = 'Send Email';
+              alert('Sent!');
             },
             (err) => {
-              btn.value = "Send Email";
+              btn.value = 'Send Email';
               alert(JSON.stringify(err));
             }
           );
@@ -298,7 +298,7 @@
     <script src="src/js/vanta.trunk.min.js"></script>
     <script>
       VANTA.TRUNK({
-        el: ".spiral",
+        el: '.spiral',
         mouseControls: false,
         touchControls: false,
         gyroControls: false,
