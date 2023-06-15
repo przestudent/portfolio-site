@@ -17,11 +17,11 @@
     />
     <link rel="icon" href="src/css/logo-color-orbit.svg" type="image/x-icon" />
     <link rel="stylesheet" href="src/css/styles.css" />
-    <link rel="stylesheet" href="/src/css/navbar.css" />
+    <!-- <link rel="stylesheet" href="/src/css/navbar.css" />
     <link rel="stylesheet" href="/src/css/main.css" />
     <link rel="stylesheet" href="/src/css/projects.css" />
     <link rel="stylesheet" href="/src/css/footer.css" />
-    <link rel="stylesheet" href="/src/css/media-queries.css" />
+    <link rel="stylesheet" href="/src/css/media-queries.css" /> -->
   </head>
   <body>
     <div class="hidden-svgs">
@@ -100,7 +100,7 @@
         </defs>
       </svg>
     </div>
-    <nav>
+    <nav class="hidden">
       <ul>
         <li>
           <a href=""
@@ -141,7 +141,7 @@
     <div class="divider"><span>Projects</span></div>
 
     <section id="projects">
-      <article>
+      <article class="hidden-sideways">
         <img
           class="image-container image-container-box-shadow"
           alt="project-1"
@@ -156,7 +156,9 @@
             reprehenderit nobis? Eos.
           </div>
           <div class="project-tech">
-            <h4>TECHNOLOGIES INCLUDE:</h4>
+            <div class="project-tech-h4 to-right">
+              <h4>TECHNOLOGIES INCLUDE:</h4>
+            </div>
             <ul>
               <li>
                 <div class="logo-tech">
@@ -182,7 +184,7 @@
           </div>
         </div>
       </article>
-      <article class="reverse">
+      <article class="reverse hidden-sideways">
         <img
           class="image-container image-container-box-shadow-reverse"
           alt="project-1"
@@ -197,7 +199,9 @@
             reprehenderit nobis? Eos.
           </div>
           <div class="project-tech project-tech-reverse">
-            <h4>TECHNOLOGIES INCLUDE:</h4>
+            <div class="project-tech-h4">
+              <h4>TECHNOLOGIES INCLUDE:</h4>
+            </div>
             <ul>
               <li>
                 <div class="logo-tech">
@@ -260,11 +264,11 @@
     </footer>
 
     <!-- #region scripts -->
+    <!-- #region email-js-->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
-
     <script type="text/javascript">
       emailjs.init('K-rriTQAUOptMitqY');
     </script>
@@ -293,9 +297,10 @@
           );
         });
     </script>
-
-    <script src="src/js/p5.min.js"></script>
-    <script src="src/js/vanta.trunk.min.js"></script>
+    <!-- #endregion -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+    <!-- <script src="src/js/vanta.trunk.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.trunk.min.js"></script>
     <script>
       VANTA.TRUNK({
         el: '.spiral',
@@ -304,13 +309,13 @@
         gyroControls: false,
         minHeight: 600.0,
         minWidth: 600.0,
-        scale: 1.0,
-        scaleMobile: 1.0,
+        scale: 1,
+        scaleMobile: 0.5,
         color: 0x7e1cba,
         backgroundColor: 0x040312,
       });
     </script>
-    <script src="src/js/index.js"></script>
+    <script defer src="src/js/index.js"></script>
     <!-- #endregion -->
   </body>
 </html>
