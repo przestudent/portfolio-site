@@ -50,5 +50,4 @@ const observerNavBar = new IntersectionObserver((navBar) => {
     navBar[0].target.classList.remove('show-slide-down');
   }
 });
-console.log(document.querySelector('nav'));
 observerNavBar.observe(document.querySelector('nav'));
