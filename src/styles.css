@@ -327,13 +327,6 @@ nav ul>li:hover {
 
 /* #region projects */
 
-
-@keyframes logo-spin {
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 .project-name {
     color: var(--color-button-primary);
     margin: 0.5em 0;
@@ -341,11 +334,6 @@ nav ul>li:hover {
 }
 
 .divider {
-    /* width: 100%;
-    background: rgb(186, 28, 168);
-    background: var(--gradient);
-    height: 18px;
-    border-radius: 6px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -420,42 +408,15 @@ nav ul>li:hover {
     box-shadow: -22px 22px 0px -10px rgba(17, 16, 30, 1);
 }
 
-/* .glint-effect {
-
-    transition: all ease 0.3s;
-    position: relative;
-    overflow: hidden;
-}
-
-.glint-effect:hover {
-    scale: 1.025
-}
-
-.glint-effect::before {
-    content: "";
-    background-color: rgb(255, 255, 255, 0.5);
-    height: 100%;
-    --glint-width: calc(var(--button-width, 20rem) / 10);
-    width: var(--glint-width);
-    display: block;
-    position: absolute;
-    top: 0;
-    left: calc(var(--glint-width) * -3);
-    transform: skew(-45deg) translateX(0);
-    transition: none;
-}
-
-.glint-effect:hover::before {
-    /* transform: skew(-45deg) translateX(calc(var(--button-width, 20rem) + calc(var(--glint-width) * 3.5))); */
-/* transform: skew(-45deg) translateX(calc(var(--button-width, 20rem) * 1.5));
-transition: all ease 1.3s;
-} */
-
 .text-container {
     grid-column: 5/11;
     grid-row: 1/2;
     text-align: right;
     z-index: 1000;
+}
+
+.project-repo {
+    color: var(--color-accent)
 }
 
 .project-description {
@@ -518,9 +479,6 @@ transition: all ease 1.3s;
     padding-top: 2em;
 }
 
-.logo-react-spin {
-    animation: 15s linear 0s infinite logo-spin;
-}
 
 /* #endregion */
 
